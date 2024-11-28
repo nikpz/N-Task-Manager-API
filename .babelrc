@@ -1,0 +1,4 @@
+//Transpiler responsible to convert a ES6/ES7 codes to a ES5 code only when the JavaScript runtime doesn’t recognize some ES6/ES7 features
+{
+    "presets": ["es2015"]
+}

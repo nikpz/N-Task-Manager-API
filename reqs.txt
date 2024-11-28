@@ -1,0 +1,66 @@
+npm i body-parser babel-cli 
+npm i consign express sequelize sqlite3
+postman connection
+npm i passport passport-jwt jwt-simple --save 
+npm i bcrypt --save  //to ancrypt password
+
+    mocha, which is a very popular in Node.js community for testing.
++   babel-register  //to run ES6 codes
++   chai    //to write BDD tests
++   supertest   //to do requests in the API
+npm i mocha babel-register chai supertest --save-dev  (to installed as devDependencies in package.json) as test dependency
+
+In mocha.opts:
+    --require test/helpers
+    --reporter spec         //to show a detailed report about the tests
+    --compilers js:babel-register   //to Mocha be able to run the tests
+    --slow 5000             //wait 5 seconds before start all tests(time enough to start the API server and db connection safely)
+
+https://www.cryptotask.org/en/freelancers/rouh-nikou/36689
+
+
+npm i -g apidoc --save-dev
+
+npm i cors --save
+
+npm i tailwindcss -D
+npx tailwind init tailwind.js
+npm i postcss-cli autoprefixer postcss-import -D
+--Then add :   "prestart": "postcss src/css/app.css -o src/App.css" into package.json
+
+//winston to treat several kinds of logs and morgan middleware for generating request's logs
+npm i winston morgan --save
+{ error: 0, warn: 1, info: 2, http: 3, verbose: 4, debug: 5, silly: 6 }
+
+npm i geoip-country    //To block some Ip location
+
+var geoip = require('geoip-country');
+
+var ip = "207.97.227.239";
+var geo = geoip.lookup(ip);
+
+console.log(geo);
+{
+  country: 'US', // "2 letter" country code defined at ISO-3166-1 alpha-2
+  name: 'United States',
+  native: 'United States',
+  continent: 'NA',
+  continent_name: 'North America',
+  phone: [ 1 ],
+  capital: 'Washington D.C.',
+  currency: [ 'USD', 'USN', 'USS' ],
+  languages: [ 'en' ],
+}
+
+
+npm i cluster --save
+change "start": "npm run apidoc && babel-node index.js"
+to
+       "start": "npm run apidoc && npm run clusters 
+
+npm i compression  --save
+
+npm i helmet --save
+
+
+npm cache clean --force

@@ -1,0 +1,51 @@
+{
+  "name": "ntask-api",
+  "version": "1.0.0",
+  "description": "Task list API",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run apidoc && npm run clusters",
+    "clusters": "babel-node clusters.js",
+    "apidoc": "apidoc -i ./routes/ -o public/apidoc",
+    "test": "SET NODE_ENV=test & mocha test/**/*.js"
+  },
+  "apidoc": {
+    "name": "Node Task API - Documentation",
+    "template": {
+      "forceLanguage": "en"
+    }
+  },
+  "author": "Roohnik",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "compression": "^1.7.5",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "jwt-simple": "^0.5.6",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "apidoc": "^1.2.0",
+    "autoprefixer": "^10.4.20",
+    "babel-register": "^6.26.0",
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "supertest": "^7.0.0",
+    "tailwindcss": "^3.4.15"
+  }
+}
